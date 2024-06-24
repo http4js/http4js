@@ -2,6 +2,17 @@
 
 A lightweight HTTP framework for Typescript / JS, with zero dependencies
 
+This is a fork, since the original appears unmaintained. This gets deployed into:
+
+https://us-npm.pkg.dev/triptease-paid-search/tt-paid-search/
+
+The commands I ran for publishing
+* everything under release.sh up until the `npm publish` command
+* `npm config set registry https://us-npm.pkg.dev/triptease-paid-search/tt-paid-search/`
+* Went into the paid-search repo and ran: `yarn artifactregistry-login`
+* `npm publish` from inside the dist folder
+
+
 # >> [read the docs :)](https://tomshacham.github.io/http4js/) <<
 
 ## Use http4js in your project

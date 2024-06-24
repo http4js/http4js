@@ -1,9 +1,9 @@
 {
-  "name": "http4js",
-  "version": "5.0.7",
+  "name": "@triptease-paid-search/http4js",
+  "version": "5.0.7-2",
   "description": "A lightweight HTTP toolkit",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "tsc; mocha --require ts-node/register 'src/{test,ssl}/**/*.ts'",

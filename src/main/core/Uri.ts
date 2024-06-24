@@ -18,7 +18,7 @@ export class Uri {
     asNativeNodeRequest: NodeURI;
     matches: KeyValues;
     private pathParamMatchingRegex: RegExp = new RegExp(/\{(\w+)\}/g);
-    private pathParamCaptureTemplate: string = "([\\w\\s\-\%]+)";
+    private pathParamCaptureTemplate: string = "([\\w\\s\-\%\&]+)";
 
 
     constructor(template: string, matches: KeyValues = {}) {
