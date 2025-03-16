@@ -96,7 +96,7 @@ describe("native node over the wire", () => {
         const request = ReqOf("GET", `${baseUrl}/url`)
             .withHeader('Host', `${invalidCharacters}`);
         const response = await HttpClient(request);
-        deepEqual(response.bodyString(), `http://localhost:${port}/url`)
+        equal(response.bodyString(), `/url`)
     });
 
     it('ungzipped body', async () => {

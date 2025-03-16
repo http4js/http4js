@@ -6,7 +6,6 @@ import {Req, ReqOf} from '../../main/core/Req';
 import {HttpClient} from '../../main/client/HttpClient';
 import {Client} from '../../main/client/Client';
 import {ZipkinCollector, ZipkinHeaders, ZipkinSpan} from '../../main/zipkin/Zipkin';
-import {isNullOrUndefined} from 'util';
 import {asHandler, Handler, HttpHandler, timingFilterBuilder} from '../../main';
 import {FakeClock} from '../clock/FakeClock';
 import {DeterministicIdGenerator} from './DeterministicIdGenerator';
@@ -153,6 +152,10 @@ describe('Zipkin', () => {
     });
 
 });
+
+function isNullOrUndefined(value: any): boolean {
+    return value === null || value === undefined;
+}
 
 function extractor(logLine: string): ZipkinSpan {
     const logLineZipkinParts = logLine.split(';');

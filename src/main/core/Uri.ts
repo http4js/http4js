@@ -1,5 +1,4 @@
 import {KeyValues} from "./HttpMessage";
-import {isNullOrUndefined} from "util";
 import {Queries} from "./HttpMessage";
 const URI = require('url');
 
@@ -50,8 +49,9 @@ export class Uri {
 
     queryParams(): Queries {
         const queries: Queries = {};
-        if (isNullOrUndefined(this.queryString())) return queries;
-        const pairs = this.queryString().split("&");
+        let queryString = this.queryString();
+        if (queryString === null || queryString === undefined) return queries;
+        const pairs = queryString.split("&");
         pairs.map(pair => {
             const split = pair.split("=");
             const name = split[0];
